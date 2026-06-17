@@ -115,7 +115,6 @@ def reduce_noise(audio_data, sr, prop_decrease=1.0, noise_duration=0.5):
     is_stereo = len(audio_data.shape) > 1
     
     # noisereduce expects shape (channels, samples) for multi-channel.
-    # We transpose to match this requirement.
     if is_stereo:
         y = audio_data.T
         y_noise = y[:, :noise_samples]
@@ -248,15 +247,18 @@ def main():
             output_path=args.output_file,
             backend=backend
         )
+
         
         print("\n[+] Noise reduction completed successfully!")
         print(f"    Cleaned file saved at: {args.output_file}")
         print("=" * 60)
-        
+
+    
     except Exception as e:
         print(f"\n[!] Error: {e}", file=sys.stderr)
         print("=" * 60)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
