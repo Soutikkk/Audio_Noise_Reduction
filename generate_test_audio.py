@@ -4,6 +4,7 @@ Synthetic Noisy Audio Generator
 -------------------------------
 Generates a test WAV file with a pure sine wave and added Gaussian white noise.
 This is used to verify the functionality of the audio noise reducer script.
+You need to create this file as you need to test the Noise_reducer.py
 """
 
 import numpy as np
