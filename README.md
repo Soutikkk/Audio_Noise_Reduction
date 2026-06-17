@@ -94,3 +94,5 @@ The source code (`noise_reducer.py`) is structured with modular functions for ea
 - **`reduce_noise(audio_data, sr, prop_decrease, noise_duration)`**: Isolates the noise sample, transposes channels to match `noisereduce`'s expectation `(channels, samples)`, performs spectral gating, and transposes the cleaned signal back.
 - **`save_audio(audio_data, sr, channels, output_path, backend)`**: Re-scales the audio data back to standard integer PCM limits and exports it using the corresponding format backend.
 - **`main()`**: Manages CLI arguments, exception handling, formatting, and console output logs.
+
+Made with ❤️ by me (Soutik)
